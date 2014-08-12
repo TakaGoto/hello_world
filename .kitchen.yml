@@ -9,7 +9,7 @@ provisioner:
 
 platforms:
 
-- name: centos-6.5
+- name: centos-6.4
   driver_plugin: digitalocean
   driver_config:
     image_id: 3448641

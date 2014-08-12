@@ -1,5 +1,5 @@
 require 'spec_helper'
-                                                                        
+
 describe 'hello::default' do
   let(:chef_run) { ChefSpec::Runner.new.converge('hello::default') }
 
@@ -17,11 +17,4 @@ describe 'hello::default' do
       content: 'hello there'
       )
   end
-
-  it 'creates the default mysql_service' do
-    expect(chef_run).to create_mysql_service('default').with(
-      port: '1234',
-      data_dir: '/data'
-      )
-  end  
 end
